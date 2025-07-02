@@ -14,16 +14,28 @@
       color: #111;
       line-height: 1.6;
     }
-    header, section {
+    header, footer {
       padding: 2em;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2em 2em;
     }
     h1, h2 {
       color: #000;
     }
-    .person {
-      margin-bottom: 2em;
+    .twocol {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2em;
+    }
+    .left, .right {
+      flex: 1 1 45%;
+      min-width: 300px;
     }
     .person img {
       max-width: 100%;
@@ -43,7 +55,6 @@
       margin-bottom: 0.5em;
     }
     footer {
-      padding: 2em;
       text-align: center;
       font-size: 0.9em;
       background: #eee;
@@ -51,62 +62,66 @@
     a {
       color: #0645ad;
     }
+    @media (max-width: 768px) {
+      .twocol {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>This Site is About Dean & Associates</h1>
-    <p>How Two Accountants Stole From Us and Vanished</p>
+    <p><strong>How Two Accountants Stole From Us and Vanished</strong></p>
     <p>Welcome to our site. We're sharing our experience with an accounting firm that, unfortunately, did not deliver the services we paid for. Our goal is to raise awareness, help others avoid a similar situation, and encourage the parties involved to make things right.</p>
     <p>In late 2023, we sought help for filing international taxes. That decision led to a months-long deception by Asad and Rosalie of "Dean & Associates." They took our money, provided no services, and eventually taunted us after going silent.</p>
     <p><strong>This is what happened.</strong></p>
   </header>
 
-  <section>
-    <h2>Who We’re Talking About</h2>
-    <p>This site documents our experience with Dean & Associates, the firm operated by Asad and Rosalie. You can visit their site here:</p>
-    <p><a href="https://www.deanandassociates.ca/
-" target="_blank">https://https://www.deanandassociates.ca/
-</a></p>
-  </section>
-
-  <section>
-    <h2>Publicly Available Info</h2>
-
-    <div class="banner">
-      <strong>THESE PEOPLE STOLE FROM US</strong>
-      <ul>
-        <li>Over a dozen emails ignored</li>
-        <li>Work never delivered</li>
-        <li>Police involved — still no refund</li>
-      </ul>
+  <section class="twocol">
+    <div class="left">
+      <h2>Who We’re Talking About</h2>
+      <p>This site documents our experience with Dean & Associates, the firm operated by Asad and Rosalie. You can visit their site here:</p>
+      <p><a href="https://www.deanandassociates.ca/" target="_blank">https://www.deanandassociates.ca/</a></p>
     </div>
-
-    <div class="person">
-      <img src="pic-assad.jpg" alt="Photo of Asad" />
-      <p><em>Photo sourced from the Dean & Associates firm site.</em></p>
-    </div>
-
-    <div class="person">
-      <img src="pic-rosalie.jpg" alt="Photo of Rosalie" />
-      <p><em>Image and biography excerpted from public-facing materials provided by the firm.</em></p>
+    <div class="right">
+      <div class="banner">
+        <strong>THESE PEOPLE STOLE FROM US</strong>
+        <ul>
+          <li>Over a dozen emails ignored</li>
+          <li>Work never delivered</li>
+          <li>Police involved — still no refund</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>🛡️ Legal / Hosting Note</h2>
-    <p>This website is hosted by GoDaddy, a U.S.-based company that complies with U.S. laws, including those related to defamation and content removal.</p>
-    <p>If anything here were false, Asad or Rosalie could take legal action to challenge it — and they still can.</p>
-    <p>We understand they might attempt to have the site taken down, even temporarily, through litigation tactics. But we’re confident that truth wins in the end. We’re not guessing, speculating, or exaggerating — we’re the victims, and we’re simply telling the truth.</p>
-    <p>This website will remain online until this situation is resolved.</p>
+  <section class="twocol">
+    <div class="right">
+      <div class="person">
+        <img src="pic-assad.jpg" alt="Photo of Asad" />
+        <p><em>Photo sourced from the Dean & Associates firm site.</em></p>
+      </div>
+      <div class="person">
+        <img src="pic-rosalie.jpg" alt="Photo of Rosalie" />
+        <p><em>Image and biography excerpted from public-facing materials provided by the firm.</em></p>
+      </div>
+    </div>
+    <div class="left">
+      <h2>🛡️ Legal / Hosting Note</h2>
+      <p>This website is hosted by GoDaddy, a U.S.-based company that complies with U.S. laws, including those related to defamation and content removal.</p>
+      <p>If anything here were false, Asad or Rosalie could take legal action to challenge it — and they still can.</p>
+      <p>We understand they might attempt to have the site taken down, even temporarily, through litigation tactics. But we’re confident that truth wins in the end. We’re not guessing, speculating, or exaggerating — we’re the victims, and we’re simply telling the truth.</p>
+      <p>This website will remain online until this situation is resolved.</p>
+    </div>
   </section>
 
   <section>
     <h2>Our Story</h2>
-    <p>In December 2023, we were referred to Rosalie Freidlin after initially contacting Asad at Dean & Associates. We had a complex tax situation, with spouses holding dual citizenships (U.S. and Canada). Rosalie spoke with us just before Christmas — and in hindsight, subtly collected the details she’d need to make us vulnerable.</p>
-    <p>They stayed in contact for several months, stringing us along until they dropped the ruse in March 2024 and stopped responding.</p>
-    <p>Later, in December 2024, Rosalie sent a final email — not to apologize, but to taunt us.</p>
-    <p>We had paid them through electronic transfers in Canada. After months of false hope, we engaged a legitimate firm. Our taxes were filed — because we already had all the documents. The only thing missing was any work by Dean & Associates.</p>
+    <p style="font-size: 1.1em">In December 2023, we were referred to Rosalie Freidlin after initially contacting Asad at Dean & Associates. We had a complex tax situation, with spouses holding dual citizenships (U.S. and Canada). Rosalie spoke with us just before Christmas — and in hindsight, subtly collected the details she’d need to make us vulnerable.</p>
+    <p style="font-size: 1.1em">They stayed in contact for several months, stringing us along until they dropped the ruse in March 2024 and stopped responding.</p>
+    <p style="font-size: 1.1em">Later, in December 2024, Rosalie sent a final email — not to apologize, but to taunt us.</p>
+    <p style="font-size: 1.1em">We had paid them through electronic transfers in Canada. After months of false hope, we engaged a legitimate firm. Our taxes were filed — because we already had all the documents. The only thing missing was any work by Dean & Associates.</p>
   </section>
 
   <section>
